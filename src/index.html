@@ -1,270 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pei & Partners - Innovation at Its Best</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pei & Partners - Innovation at Its Best</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">Pei & Partners</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="progress-indicator">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Pei & Partners</div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#demo" class="nav-link">Demo</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="progress-indicator">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </nav>
 
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Innovation Starts Here</h1>
-            <p class="hero-subtitle">Transforming ideas into digital reality</p>
-            <button class="cta-button" onclick="openModal('heroModal')">
-                <i class="fas fa-rocket"></i> Get Started
+  <!-- Hero -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Innovation Starts Here</h1>
+      <p class="hero-subtitle">Transforming ideas into digital reality</p>
+      <button class="cta-button" onclick="openModal('heroModal')">
+        <i class="fas fa-rocket"></i> Get Started
+      </button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Pei & Partners</h2>
+      <div class="multi-column-content">
+        <div class="column">
+          <h3>Our Mission</h3>
+          <p>Founded by two UIUC students, we strive to create innovative solutions that transform businesses and improve lives through cutting-edge technology. Our commitment to excellence drives everything we do.</p>
+        </div>
+        <div class="column">
+          <h3>Our Vision</h3>
+          <p>To be the leading technology partner for businesses worldwide, enabling digital transformation through innovative solutions and exceptional service.</p>
+        </div>
+        <div class="column">
+          <h3>Our Values</h3>
+          <p>Innovation, integrity, and customer satisfaction are at the core of our business. We believe in building lasting relationships through trust and quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services (Carousel) -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="servicesCarousel">
+          <div class="carousel-slide">
+            <div class="service-card">
+              <i class="fas fa-code service-icon"></i>
+              <h3>Web Development</h3>
+              <p>Custom web applications built with modern technologies and best practices for optimal performance and user experience.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="service-card">
+              <i class="fas fa-server service-icon"></i>
+              <h3>DevOps</h3>
+              <p>CI/CD pipelines, containerization, infrastructure-as-code, and cloud automation to ship faster with reliability.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="service-card">
+              <i class="fas fa-lightbulb service-icon"></i>
+              <h3>Brainstorming</h3>
+              <p>Product ideation workshops and UX strategy to clarify goals, scope features, and validate solutions fast.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section portfolio-section">
+    <div class="container">
+      <h2 class="section-title">Our Work</h2>
+      <div class="portfolio-content">
+        <div class="portfolio-video">
+          <img src="assets/WechatIMG17808.jpg" alt="Project Showcase"
+               style="width:100%;height:auto;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);">
+        </div>
+        <div class="portfolio-text">
+          <h3>Featured Project</h3>
+          <p>Our latest project showcase demonstrating innovative solutions and cutting-edge technology implementations.</p>
+          <button class="portfolio-btn" onclick="openModal('portfolioModal')">
+            <i class="fas fa-eye"></i> View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo: background video section -->
+  <section id="demo" class="section demo-section">
+    <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+              type="video/mp4">
+    </video>
+    <div class="demo-overlay"></div>
+    <div class="container">
+      <h2 class="section-title">Demo Work</h2>
+      <div class="demo-content">
+        <div class="demo-text">
+          <h3>Interactive Showcase</h3>
+          <p>Experience our innovative solutions through this interactive demonstration. Watch as we bring ideas to life with cutting-edge technology and creative problem-solving.</p>
+        </div>
+        <div class="demo-features">
+          <div class="feature-item"><i class="fas fa-bolt"></i><span>Fast</span></div>
+          <div class="feature-item"><i class="fas fa-mobile-alt"></i><span>Responsive</span></div>
+          <div class="feature-item"><i class="fas fa-shield-alt"></i><span>Secure</span></div>
+        </div>
+        <button class="demo-btn">
+          <i class="fas fa-play"></i> Explore More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section team-section">
+    <div class="container">
+      <h2 class="section-title">Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-photo">
+            <img src="assets/WechatIMG17808.jpg" alt="Team Leader">
+          </div>
+          <h3>Xingrui Pei</h3>
+          <p>Team Leader</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="member-photo">
+            <img src="assets/WechatIMG17808.jpg" alt="Team Member">
+          </div>
+          <h3>Lixin Yang</h3>
+          <p>Co-Founder</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>210 N Goodwin Ave, Champaign IL</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>217-xxx-xxxx</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>siri78980@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
             </button>
+          </form>
         </div>
-    </section>
-
-    <section id="about" class="section about-section">
-        <div class="container">
-            <h2 class="section-title">About Pei & Partners</h2>
-            <div class="multi-column-content">
-                <div class="column">
-                    <h3>Our Mission</h3>
-                    <p>Founded by two UIUC students, we strive to create innovative solutions that transform businesses and improve lives through cutting-edge technology. Our commitment to excellence drives everything we do.</p>
-                </div>
-                <div class="column">
-                    <h3>Our Vision</h3>
-                    <p>To be the leading technology partner for businesses worldwide, enabling digital transformation through innovative solutions and exceptional service.</p>
-                </div>
-                <div class="column">
-                    <h3>Our Values</h3>
-                    <p>Innovation, integrity, and customer satisfaction are at the core of our business. We believe in building lasting relationships through trust and quality.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section services-section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="carousel-container">
-                <div class="carousel" id="servicesCarousel">
-                    <div class="carousel-slide active">
-                        <div class="service-card">
-                            <i class="fas fa-code service-icon"></i>
-                            <h3>Web Development</h3>
-                            <p>Custom web applications built with modern technologies and best practices for optimal performance and user experience.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="service-card">
-                            <i class="fas fa-mobile-alt service-icon"></i>
-                            <h3>Mobile Development</h3>
-                            <p>Native and cross-platform mobile applications that deliver seamless experiences across all devices and platforms.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="service-card">
-                            <i class="fas fa-cloud service-icon"></i>
-                            <h3>Cloud Solutions</h3>
-                            <p>Scalable cloud infrastructure and services to help your business grow and adapt to changing market demands.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="service-card">
-                            <i class="fas fa-shield-alt service-icon"></i>
-                            <h3>Cybersecurity</h3>
-                            <p>Comprehensive security solutions to protect your digital assets and ensure business continuity.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" onclick="changeSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section portfolio-section">
-        <div class="container">
-            <h2 class="section-title">Our Work</h2>
-            <div class="portfolio-content">
-                <div class="portfolio-video">
-                    <img src="assets/WechatIMG17808.jpg" alt="Project Showcase" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div class="portfolio-text">
-                    <h3>Featured Project</h3>
-                    <p>Our latest project showcase demonstrating innovative solutions and cutting-edge technology implementations.</p>
-                    <button class="portfolio-btn" onclick="openModal('portfolioModal')">
-                        <i class="fas fa-eye"></i> View Details
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section team-section">
-        <div class="container">
-            <h2 class="section-title">Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="assets/WechatIMG17808.jpg" alt="Team Leader">
-                    </div>
-                    <h3>Xingrui Pei</h3>
-                    <p>Team Leader</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="assets/WechatIMG17808.jpg" alt="Team Member">
-                    </div>
-                    <h3>Lixin Yang</h3>
-                    <p>Co-Founder</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>210 N Goodwin Ave, Champaign IL</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>217-xxx-xxxx</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>siri78980@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Pei & Partners</h3>
-                    <p>Innovation at its best. Transforming ideas into digital reality.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">Cloud Solutions</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Pei & Partners. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div id="heroModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('heroModal')">&times;</span>
-            <h2>Welcome to Pei & Partners</h2>
-            <p>We're excited to help you transform your ideas into reality. Our team of experts is ready to work with you on your next project.</p>
-            <ul>
-                <li>Custom web applications</li>
-                <li>Mobile app development</li>
-                <li>Cloud infrastructure</li>
-                <li>Digital transformation consulting</li>
-            </ul>
-            <button class="modal-btn">Start Your Project</button>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="portfolioModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('portfolioModal')">&times;</span>
-            <h2>Project Details</h2>
-            <p>This project showcases our expertise in creating scalable, user-friendly applications with modern technologies.</p>
-            <div class="project-details">
-                <div class="detail-item">
-                    <strong>Technology Stack:</strong>
-                    <p>React, Node.js, MongoDB, AWS</p>
-                </div>
-                <div class="detail-item">
-                    <strong>Duration:</strong>
-                    <p>6 months</p>
-                </div>
-                <div class="detail-item">
-                    <strong>Team Size:</strong>
-                    <p>2 developers</p>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Pei & Partners</h3>
+          <p>Innovation at its best. Transforming ideas into digital reality.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile Apps</a></li>
+            <li><a href="#">Cloud Solutions</a></li>
+            <li><a href="#">Consulting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pei & Partners. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <!-- Modals -->
+  <div id="heroModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('heroModal')">&times;</span>
+      <h2>Welcome to Pei & Partners</h2>
+      <p>We're excited to help you transform your ideas into reality. Our team of experts is ready to work with you on your next project.</p>
+      <ul>
+        <li>Custom web applications</li>
+        <li>Mobile app development</li>
+        <li>Cloud infrastructure</li>
+        <li>Digital transformation consulting</li>
+      </ul>
+      <button class="modal-btn">Start Your Project</button>
+    </div>
+  </div>
+
+  <div id="portfolioModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('portfolioModal')">&times;</span>
+      <h2>Project Details</h2>
+      <p>This project showcases our expertise in creating scalable, user-friendly applications with modern technologies.</p>
+      <div class="project-details">
+        <div class="detail-item">
+          <strong>Technology Stack:</strong>
+          <p>React, Node.js, MongoDB, AWS</p>
+        </div>
+        <div class="detail-item">
+          <strong>Duration:</strong>
+          <p>6 months</p>
+        </div>
+        <div class="detail-item">
+          <strong>Team Size:</strong>
+          <p>2 developers</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
