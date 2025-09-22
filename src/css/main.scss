@@ -109,6 +109,14 @@ img,video{ max-width:100%; height:auto; display:block; }
   i{ margin-right:8px; }
 }
 
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  @include card-shadow; 
+}
+
+
 // ---- Team ----
 .team-section{ background:$white; min-height:80vh; @include flex-center; flex-direction:column; }
 .team-grid{ @include responsive-grid(3); width:100%; }
@@ -235,4 +243,14 @@ img,video{ max-width:100%; height:auto; display:block; }
   .hero-subtitle{ font-size:1.2rem; }
   .section{ padding:60px 0; }
   .carousel-btn{ display:none; }
+}
+
+.will-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.did-animate {
+  opacity: 1;
+  transform: translateY(0);
 }

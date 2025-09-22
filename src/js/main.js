@@ -27,16 +27,26 @@ function initializeNavbar() {
     if (scrolled > 100) navbar.classList.add('scrolled');
     else navbar.classList.remove('scrolled');
 
-    // active link
-    let current = '';
-    document.querySelectorAll('section[id]').forEach(sec => {
-      const top = sec.offsetTop - 100;
-      const h = sec.offsetHeight;
-      if (scrolled >= top && scrolled < top + h) current = sec.id;
-    });
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-    });
+    
+  const navbarHeight = navbar.getBoundingClientRect().height;
+  let current = '';
+
+  document.querySelectorAll('section[id]').forEach(sec => {
+    const top = sec.offsetTop - navbarHeight - 1; 
+    const h = sec.offsetHeight;
+    if (scrolled >= top && scrolled < top + h) current = sec.id;
+  });
+
+  
+  if (window.innerHeight + scrolled >= docHeight - 2) {
+    const last = document.querySelector('section[id]:last-of-type');
+    if (last) current = last.id;
+  }
+
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+  
   });
 }
 
@@ -125,24 +135,26 @@ function initializeContactForm() {
   });
 }
 
-// --- Animate on scroll (inline styles fallback) ---
+// --- Animate on scroll  ---
+
 function addScrollAnimations() {
-  const els = document.querySelectorAll('.hero-content, .section-title, .team-member, .service-card');
+  const targets = document.querySelectorAll('.hero-content, .section-title, .team-member, .service-card');
+
+  
+  targets.forEach(el => el.classList.add('will-animate'));
+
+ 
   const obs = new IntersectionObserver(entries => {
     entries.forEach(en => {
       if (en.isIntersecting) {
-        en.target.style.opacity = '1';
-        en.target.style.transform = 'translateY(0)';
+        en.target.classList.add('did-animate');
+        
+        obs.unobserve(en.target);
       }
     });
   }, { threshold: 0.1 });
 
-  els.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity .6s ease, transform .6s ease';
-    obs.observe(el);
-  });
+  targets.forEach(el => obs.observe(el));
 }
 
 // --- Background video autoplay assist ---
